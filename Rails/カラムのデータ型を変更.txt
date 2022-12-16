@@ -1,0 +1,19 @@
+- カラムのデータ型を変更する場合
+
+Rails
+    
+    `rails g migration change_data_カラム名_to_テーブル名`
+    
+    今回はyear_oldカラムのデータ型をinteger→stringへ変更
+    
+    `rails g migration change_data_year_old_to_apartments`
+    
+    マイグレーションファイルに追記
+    
+    `change_column :テーブル名, :カラム名, :変更後のデータ型`
+    
+    マイグレーションを実行
+    
+    `rails db:migrate`
+    
+    完了
